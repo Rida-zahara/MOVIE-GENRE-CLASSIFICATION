@@ -14,8 +14,7 @@ st.set_page_config(page_title="Movie Genre Predictor", page_icon="🎬", layout=
 @st.cache_resource
 def train_model():
     # Loading data from your path
-    path = 'data/train_data.txt' 
-# This tells Render to look inside the 'data' folder in YOUR REPO"
+    path = "/Users/rida/Documents/movie_genre_classification/data/train_data.txt"
     cols = ['ID', 'TITLE', 'GENRE', 'DESCRIPTION']
     df = pd.read_csv(path, sep=':::', names=cols, engine='python').head(20000) # Using 20k for speed
     
